@@ -1,0 +1,50 @@
+@use 'variables';
+
+.footer {
+    background-image: linear-gradient(
+            variables.$yellow,
+            variables.$purple 20% 20%,
+            #000 20% 21%,
+            variables.$purple 21% 21%,
+            variables.$purple,
+            variables.$purple);
+    padding: 1rem 0;
+    text-align: center;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 1rem;
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    &__text {
+        font-size: 14px;
+        padding-top: 0.5rem;
+        @media (min-width: 768px) {
+            padding: 0;;
+        }
+    }
+
+    &__social {
+        display: flex;
+        gap: 1rem;
+        padding-top: 1rem;
+        align-items: center;
+
+
+        a {
+            display: inline-block;
+            transition: transform 0.2s;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
